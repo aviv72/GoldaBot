@@ -9,8 +9,6 @@ import logging
 from telegram import Update, ForceReply
 from telegram.ext import CallbackContext, CommandHandler, Updater, MessageHandler, Application
 
-TOKEN = "5111028169:AAF7LXcptWdQKXwhUKxjMvzHN9voQ62YfFE"
-
 # Enable logging
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
@@ -58,8 +56,7 @@ def main() -> None:
     # updater = Updater(TOKEN)
     # dispatcher = updater.dispatcher
 
-    telegram.ext.filters.Regex('corona|קורונה|covid')
-
+    TOKEN = os.environ("TOKEN")
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(TOKEN).build()
 
