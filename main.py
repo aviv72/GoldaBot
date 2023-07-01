@@ -56,7 +56,7 @@ def main() -> None:
     # updater = Updater(TOKEN)
     # dispatcher = updater.dispatcher
 
-    TOKEN = os.environ("TOKEN")
+    TOKEN = os.environ['TOKEN']
     # Create the Application and pass it your bot's token.
     application = Application.builder().token(TOKEN).build()
 
